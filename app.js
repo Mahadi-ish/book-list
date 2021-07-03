@@ -12,7 +12,7 @@ document.getElementById('add-book').addEventListener('click', function(e){
     }
     else{
         const newRow = document.createElement('tr');
-        let newTitle = document.createElement('th');
+        const newTitle = document.createElement('th');
         newTitle.innerText = title;
         newRow.append(newTitle);
         //console.log(newTitle);
@@ -25,5 +25,10 @@ document.getElementById('add-book').addEventListener('click', function(e){
 
         const newBookList = document.getElementById('book-list');
         newBookList.append(newRow);
+
     }
+    
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
+    document.getElementById('year').value = '';
 })
